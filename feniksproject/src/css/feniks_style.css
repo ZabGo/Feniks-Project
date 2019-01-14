@@ -1,0 +1,14 @@
+/* CSS File for Feniks */
+
+.fancybox {
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: #cedb95;
+  text-align: center;
+  padding: 15px;
+}
+
+.pink {
+  background: pink;
+  color:pink;
+}
