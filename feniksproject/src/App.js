@@ -5,6 +5,11 @@ import Home from './components/pages/Home.js';
 import NewClient from './components/pages/NewClient.js';
 import ExistingClients from './components/pages/ExistingClients.js';
 
+import ClientAssessment from './components/pages/ClientAssessment.js'
+import ClientInfo from './components/pages/ClientInfo.js'
+import EditClient from './components/pages/EditClient.js'
+import Equalities from './components/pages/Equalities.js'
+
 import './css/feniks_style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.min.js';
@@ -38,6 +43,10 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/newclient" component={NewClient} />
           <Route path="/clients" component={ExistingClients} />
+          <Route path="/assess" component={ClientAssessment} />
+          <Route path="/details" component={ClientInfo} />
+          <Route path="/edit" component={EditClient} />
+          <Route path="/equality" component={Equalities} />
           </>
         </Router>
       </div>
