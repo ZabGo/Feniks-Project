@@ -1,48 +1,54 @@
-import React, { Component,Router } from 'react';
+import React, { Component } from 'react';
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
+
+import Home from './components/pages/Home.js';
+import NewClient from './components/pages/NewClient.js';
+import ExistingClients from './components/pages/ExistingClients.js';
+
+import ClientAssessment from './components/pages/ClientAssessment.js'
+import ClientInfo from './components/pages/ClientInfo.js'
+import EditClient from './components/pages/EditClient.js'
+import Equalities from './components/pages/Equalities.js'
+
 import './css/feniks_style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.min.js';
 
 class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-sm-12 fancybox">
-            <form>
-              <select className="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-              </select>
-            </form>
-          </div>
-        </div>
+        <Router>
+          <>
+          <main className="container-fluid px-0">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3 mx-0">
+              <Link to="/" className="navbar-brand logo-text">Feniks</Link>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
 
-        <form>
-          <div className="row">
-            <div className="col-sm-6 fancybox">
-              <input type="text" placeholder="Help me" className=""/>
-            </div>
-            <div className="col-sm-6 fancybox">
-              <div className="form-group">
-                <label for="usr">Name</label>
-                <input type="text" className="form-control" id="usr" placeholder="HeLp Me ThIs HuRtS mY bRaIn"/>
+              <div className="collapse navbar-collapse float-right" id="navbarSupportedContent">
+                <ul className="navbar-nav ml-auto">
+                  <li className="nav-item">
+                    <Link to="/newclient" className="nav-link">New Client</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/clients" className="nav-link">Clients</Link>
+                  </li>
+                </ul>
               </div>
-              <input type="text" placeholder="
-F̸̢͚̣̜̰̝͍͇̥̊͒̈́́̓̽̃̏͑͢ǫ̱̘̩͓̺̬͎͍̏͆̊̋͑͝ṙ̨̡͚͙̻͚̼̪̥̩̇́́̓̍̾͒ẽ̩̲͖̣̫̂͋̈̌̚̚͠ņ͓̪̟̼̖͔͈̄̀̄͂̽̀̅̽a̡̢̹͙̹̟͇̫̟͉̐͌̔̓̆̃̈͂͘m̶̧̼͔̗͌͆̄̽̍͐̏̀̕͢͟ͅͅe̶̢͇̻̫̟͆͆͑͌͐̃̀͘͢͝" className="form-control"/>
-              <input type="text" placeholder="
-Ṣ̷̛̤͙̰̭̙͒̄̃̚͘ư̷̞̗̣͍͈̮̗͒̏̏͊̅́̔̄͢r̷̡̡̢̡̬̻̞̫͂̊͑̀̓ͅņ̰͙̰͖͇͑̏̓̒̒̾͌͒͑͢a̷͎̥̹̯̔͗͋̀͗͊̀̉͘ͅm̛̺̱̤̞̰̰̈̂͊͑͑͗̃̄ẽ͔͕̮̲̫̬̐͋̑̇
-" className="form-control"/>
-              <input type="text" placeholder="
-B̮̰̰̼̳̦̥͍̰͐̽̐̊̐̊̔̚ͅl̸̡̹͉̠͍̣̣̾̅̓̈̎̒̕̚o̵̡̫̟̹̟̱͆̐͐̃̊͝o̴͖̤͉̼̐̐̃̾͑͢d̸̝̬̝̬͈̔̂̑̄̔͢ T̸̢̩͉͔̗͚̍̊̈́̃̄͌̉͗͋͗͜͜ͅy̢̪̣͙̰̬͓̆͒̋̇͟͠p̵̧͚̲͔̮̗̫͉̱̽͋̾̒͢͠ȩ̡̣̯̬̞̂́́̇͋̐͠
-" className="form-control"/>
-              <input type="text" placeholder="
-Ḑ̢̛̮̗̟̤̔̃͊̎e̴̢̙͔̦̝͕̗̻̻͒̉͆̎̎̀l̨̛͚͕̠̠̘̹͇̟͔̑̀͒̓͘͝i̛̛̪̞̹̼̩̠͙̰̦̒̿̂̇̃͊̉̕͢c̸̢̹͓̥͕̥̰̫̲̣̈͐͑͂̒͂̋͐̕͡į̷̣̺̗͍̲̯̽̾͌͗̒̋̒̀̕͟͡o̶̲͔̳̦̠͖̭͉̊͌̆͛̉̉͡ù̴͔̦̱̭̠̄̊̐́͜͞s̢̢̡̰̗͍̘̣̐͗̌̾͑̕͠͡ M̡̮̱͓̠͚̠̳̬̑̎͊͌̿͡E̶̟̙̩̺͙̭͂̈̂͑̎̕̚ą̛͓̗̬̩̦̼͍̍͋́͊̕͢ț̴̺͇̪̞͊̇̒͆͑̈̓͛͌̕
-" className="form-control"/>
-            </div>
-          </div>
-        </form>
+            </nav>
+            <div className="body-back"></div>
+          </main>
+          <Route exact path="/" component={Home} />
+          <Route path="/newclient" component={NewClient} />
+          <Route path="/clients" component={ExistingClients} />
+          <Route path="/assess" component={ClientAssessment} />
+          <Route path="/details" component={ClientInfo} />
+          <Route path="/edit" component={EditClient} />
+          <Route path="/equality" component={Equalities} />
+          </>
+        </Router>
       </div>
     );
   }
