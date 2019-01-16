@@ -1,5 +1,7 @@
 /* CSS File for Feniks */
 
+/* These are helper styles to test out stuff */
+
 .fancybox {
   border: 2px solid black;
   border-radius: 15px;
@@ -10,4 +12,26 @@
 .pink {
   background: pink;
   /* color:pink; */
+}
+
+/* Real CSS starts here */
+/* Tag Styles */
+
+body{
+}
+
+label{
+  margin-right:15px;
+}
+
+/* Class Styles  */
+
+.content-area{
+}
+
+.content-block{
+  background: RGBA(200,200,200,0.7);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0 0 15px 0;
 }
