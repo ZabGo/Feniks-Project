@@ -17,36 +17,35 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid px-0">
         <Router>
           <>
-          <main className="container-fluid px-0">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3 mx-0">
-              <Link to="/" className="navbar-brand logo-text">Feniks</Link>
-              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
+          <nav className="nav navbar-expand-lg navbar-dark bg-dark mb-3 mx-0 px-3">
+            <Link to="/" className="navbar-brand logo-text">Feniks</Link>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
 
-              <div className="collapse navbar-collapse float-right" id="navbarSupportedContent">
-                <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <Link to="/newclient" className="nav-link">New Client</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="/clients" className="nav-link">Clients</Link>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            <div className="body-back"></div>
-          </main>
-          <Route exact path="/" component={Home} />
-          <Route path="/newclient" component={NewClient} />
-          <Route path="/clients" component={ExistingClients} />
-          <Route path="/assess" component={ClientAssessment} />
-          <Route path="/details" component={ClientInfo} />
-          <Route path="/edit" component={EditClient} />
-          <Route path="/equality" component={Equalities} />
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link to="/newclient" className="nav-link">New Client</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/clients" className="nav-link">Clients</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div className="content-area mx-5">
+            <Route exact path="/" component={Home} />
+            <Route path="/newclient" component={NewClient} />
+            <Route path="/clients" component={ExistingClients} />
+            <Route path="/assess" component={ClientAssessment} />
+            <Route path="/details" component={ClientInfo} />
+            <Route path="/edit" component={EditClient} />
+            <Route path="/equality" component={Equalities} />
+          </div>
           </>
         </Router>
       </div>
