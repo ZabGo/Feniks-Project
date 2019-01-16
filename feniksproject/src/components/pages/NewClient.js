@@ -187,7 +187,8 @@ const NewClient=()=>(
 
         <div className="content-block">
           <div className="form-group">
-            <Link to="/equality" className="btn btn-lg btn-info btn-block">Demo Submit</Link>
+            <Link to={{pathname:'/equality',state:{dob:"14/5/82",employment:"2"}}} className="btn btn-lg btn-success btn-block">Demo Submit</Link>
+
             <button type="submit" className="btn btn-lg btn-success btn-block disabled">Submit</button>
             <button type="reset" className="btn btn-lg btn-block btn-danger">Reset</button>
           </div>
