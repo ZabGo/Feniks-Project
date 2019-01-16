@@ -24,14 +24,25 @@ label{
   margin-right:15px;
 }
 
+h4 {
+  background: RGBA(150,150,150,0.7);
+  box-shadow: -5px 5px RGBA(0,0,0,0.1);
+  padding: 10px;
+}
+
 /* Class Styles  */
 
 .content-area{
 }
 
 .content-block{
-  background: RGBA(200,200,200,0.7);
+  background: RGBA(230,230,230,0.7);
   border-radius: 15px;
   padding: 10px;
   margin: 0 0 15px 0;
+}
+
+.gdpr{
+  padding:20px 50px;
+  font-size: 14px;
 }
