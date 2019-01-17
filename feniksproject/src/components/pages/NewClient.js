@@ -380,7 +380,7 @@ class NewClient extends Component{
 
           <div className="content-block">
             <div className="form-group">
-              <Link to={{pathname:'/equality',state:{dob:this.state.dob,employment:this.state.employment,hear:this.state.hear}}} className="btn btn-lg btn-success btn-block">Submit</Link>
+              <Link type="submit" to={{pathname:'/equality',state:{dob:this.state.dob,employment:this.state.employment,hear:this.state.hear}}} className="btn btn-lg btn-success btn-block">Submit</Link>
               <button type="reset" className="btn btn-lg btn-block btn-danger">Reset</button>
             </div>
           </div>
