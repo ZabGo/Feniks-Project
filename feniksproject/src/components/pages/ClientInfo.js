@@ -3,10 +3,18 @@ import {Link} from 'react-router-dom';
 
 const ClientInfo=()=>(
   <Fragment>
-    Client information page <br/>
-    <Link to="/details" className="btn btn-lg btn-info disabled">Client Details</Link>
-    <Link to="/edit" className="btn btn-lg btn-info">Edit Client</Link>
-    <Link to="/assess" className="btn btn-lg btn-info">Client Assessment</Link>
+    <div className="content-block">
+      <div className="row">
+        <h4>Client Information</h4>
+      </div>
+      <div className="row">
+        <div className="col-sm-12 btn-group">
+          <Link to="/details" className="btn btn-lg btn-info disabled float-right">Client Details</Link>
+          <Link to="/edit" className="btn btn-lg btn-info float-right">Edit Client</Link>
+          <Link to="/assess" className="btn btn-lg btn-info float-right">Client Assessment</Link>
+        </div>
+      </div>
+    </div>
   </Fragment>
 )
 export default ClientInfo;

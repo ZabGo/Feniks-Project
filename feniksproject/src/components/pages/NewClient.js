@@ -311,7 +311,7 @@ class NewClient extends Component{
 
           <div className="content-block">
             <div className="row">
-              <h4>Details</h4>
+              <h4>Projects</h4>
             </div>
             <div className="form-group row">
               <label htmlFor="projects" className="col-sm-12 col-form-label">Which Project(s) would you like to attend? Please tick all relevant boxes.</label>
