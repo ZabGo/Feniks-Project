@@ -13,6 +13,7 @@ import Equalities from './components/pages/Equalities.js'
 
 import './css/feniks_style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 // import 'bootstrap/dist/js/bootstrap.min.js';
 
 class App extends Component {
