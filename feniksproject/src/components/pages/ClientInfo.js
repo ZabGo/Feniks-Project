@@ -15,6 +15,28 @@ const ClientInfo=()=>(
         </div>
       </div>
     </div>
+
+    <div className="content-block">
+      <div className="row">
+        <h4>Personal Information</h4>
+      </div>
+      <div className="row">
+        <div className="col-sm-12">
+          Client ID | Title | Name | Date of Birth | GP | Address | Phone | email | employment status | voicemail | from Feniks? | Mailing list
+        </div>
+      </div>
+    </div>
+
+    <div className="content-block">
+      <div className="row">
+        <h4>Projects</h4>
+      </div>
+      <div className="row">
+        <div className="col-sm-12">
+          Projects to attend
+        </div>
+      </div>
+    </div>
   </Fragment>
 )
 export default ClientInfo;

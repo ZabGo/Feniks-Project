@@ -16,6 +16,11 @@ const Equalities =(props)=> {
     }
     console.log("event",equalities);
     props.handleEqualitiesPost(equalities);
+
+    // Move to equalities page
+
+    // wait for response from server / db before doing this next bit
+    window.location = "/equality"
   }
     return (
       <Fragment>
@@ -117,7 +122,7 @@ const Equalities =(props)=> {
           </div>
           <div className="content-block">
             <div className="form-group btn-group" role="group" aria-label="Submission Buttons">
-              <Link to='/clients' className="btn btn-lg btn-success">Submit</Link>
+              <input type="submit" className="btn btn-lg btn-block btn-success" value="Submit"/>
               <button type="reset" className="btn btn-lg btn-danger">Reset</button>
               <Link to='/clients' className="btn btn-lg btn-danger">Skip</Link>
             </div>
