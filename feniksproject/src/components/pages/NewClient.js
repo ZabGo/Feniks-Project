@@ -1,4 +1,4 @@
-import React,{Component,Fragment} from 'react';
+import React,{Component,Fragment,Link} from 'react';
 
 const NewClient =(props)=>{
   function handleSubmit(event){
@@ -215,23 +215,13 @@ const NewClient =(props)=>{
               <input type="radio" id="hear6" name="hear" className="form-check-input" value="6"/>
               <label className="form-check-label" htmlFor="hear6">Other</label>
             </div>
-
+          </div>
 
 
           <div className="content-block">
             <div className="form-group">
 
-              <Link
-                type="submit"
-                to='/equality'
-                // params={{
-                //   dob:event.target.dob.value,
-                //   employment:event.target.employment.value,
-                //   hear:event.target.hear.value
-                // }}
-                className="btn btn-lg btn-block btn-success">
-                Submit
-              </Link>
+              <input type="submit" className="btn btn-lg btn-block btn-success" value="Submit"/>
               <button type="reset" className="btn btn-lg btn-block btn-danger">Reset</button>
             </div>
           </div>
