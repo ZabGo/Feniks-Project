@@ -5,6 +5,7 @@ import Home from './components/pages/Home.js';
 import NewClient from './components/pages/NewClient.js';
 import ExistingClients from './components/pages/ExistingClients.js';
 
+import NewClientContainer from './containers/NewClientContainer'
 import ClientAssessment from './components/pages/ClientAssessment.js'
 import ClientInfo from './components/pages/ClientInfo.js'
 import EditClient from './components/pages/EditClient.js'
@@ -40,7 +41,7 @@ class App extends Component {
           </nav>
           <div className="content-area mx-5">
             <Route exact path="/" component={Home} />
-            <Route path="/newclient" component={NewClient} />
+            <Route path="/newclient" component={NewClientContainer} />
             <Route path="/clients" component={ExistingClients} />
             <Route path="/assess" component={ClientAssessment} />
             <Route path="/details" component={ClientInfo} />

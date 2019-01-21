@@ -1,5 +1,4 @@
 import React,{Component,Fragment} from 'react';
-import {Link} from 'react-router-dom';
 
 const NewClient =(props)=>{
   function handleSubmit(event){
@@ -42,45 +41,52 @@ const NewClient =(props)=>{
             <div className="row">
               <h4>Personal Information</h4>
             </div>
+
             <div className="form-group row">
               <label htmlFor="title" className="col-sm-2 col-form-label">Title</label>
               <div className="col-sm-9">
                 <select id="title" name="title" className="form-control">
                   <option>Select...</option>
-                  <option value="1">Mr</option>
-                  <option value="2">Miss</option>
-                  <option value="3">Ms</option>
-                  <option value="4">Other</option>
+                  <option value="Mr">Mr</option>
+                  <option value="Miss">Miss</option>
+                  <option value="Ms">Ms</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
+
             <div className="form-group row">
               <label htmlFor="surname" className="col-sm-2 col-form-label">Surname(s)</label>
               <div className="col-sm-9">
+
                 <input type="text" id="surname" name="surname" className="form-control"  placeholder="Surname(s)" required/>
               </div>
             </div>
+
             <div className="form-group row">
               <label htmlFor="forename" className="col-sm-2 col-form-label">Forename(s)</label>
               <div className="col-sm-9">
+
                 <input type="text" id="forename" name="forename" className="form-control"  placeholder="Forename(s)" required/>
               </div>
             </div>
+
             <div className="form-group row">
               <label htmlFor="dob" className="col-sm-2 col-form-label">Date of Birth</label>
               <div className="col-sm-9">
                 <input type="date" id="dob" name="dob" className="form-control"  placeholder="" required />
               </div>
             </div>
+
             <div className="form-group row">
               <label htmlFor="gp" className="col-sm-2 col-form-label">GP Name and Practice</label>
               <div className="col-sm-9">
-                <input type="text" id="gp" name="gp" className="form-control"  placeholder="GP Name and Paractice" />
+                <input type="text" id="gp" name="gp" className="form-control"  placeholder="GP Name and Practice" />
               </div>
             </div>
-          </div>
+            </div>
 
-          <div className="content-block">
+            <div className="content-block">
             <div className="row">
               <h4>Details</h4>
             </div>
@@ -125,12 +131,12 @@ const NewClient =(props)=>{
               <div className="col-sm-9">
                 <select id="employment" name="employment" className="form-control">
                   <option>Select...</option>
-                  <option value="1">Employed</option>
-                  <option value="2">Self-Employed</option>
-                  <option value="3">Unemployed</option>
-                  <option value="4">Retired</option>
-                  <option value="5">Student</option>
-                  <option value="6">Other</option>
+                  <option value="Employed">Employed</option>
+                  <option value="Self-Employed">Self-Employed</option>
+                  <option value="Unemployed">Unemployed</option>
+                  <option value="Retired">Retired</option>
+                  <option value="Student">Student</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
@@ -209,18 +215,12 @@ const NewClient =(props)=>{
               <input type="radio" id="hear6" name="hear" className="form-check-input" value="6"/>
               <label className="form-check-label" htmlFor="hear6">Other</label>
             </div>
-          </div>
 
-          <div className="content-block gdpr">
-            In accordance with this Act your permission is needed for us to collect and keep any personal data (e.g. name, e-mail, address) whether by manual or electronic means. We therefore ask every client / a person making referral on the client’s behalf to confirm below that they give Feniks the necessary permission to keep the data they are willing to disclose, and to keep confidential records about their attendance and counselling. This does not affect in any way the confidentiality of therapy / counselling sessions.
-            Feniks gathers statistical information about its work and its clients, which is used for policy making, statistical and promotional purposes. In all cases this does not identify individual clients.
-            <hr/>
-            On behalf of myself / the client I refer I give permission for Feniks to keep the data I disclose and for   confidential records to be kept about the attendance and therapy / counselling
 
-          </div>
 
           <div className="content-block">
             <div className="form-group">
+
               <Link
                 type="submit"
                 to='/equality'
