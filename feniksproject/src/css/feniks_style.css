@@ -58,3 +58,27 @@ h4 {
   border-radius: 15px;
   box-shadow: -15px 15px RGBA(0,0,0,0.5);
 }
+
+.column-head {
+  background: RGBA(230,230,230,0.9);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 10px;
+  margin: 0;
+  border:1px solid black;
+  text-align:center;
+  font-weight:bold;
+}
+
+.column-body{
+  background: RGBA(230,230,230,0.9);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 10px;
+  margin: 0;
+  border:1px solid black;
+}
+
+.btn-shadow{
+  box-shadow: -5px 5px RGBA(0,0,0,0.5);
+}
