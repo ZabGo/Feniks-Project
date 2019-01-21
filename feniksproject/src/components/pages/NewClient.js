@@ -32,6 +32,10 @@ const NewClient =(props)=>{
     }
     console.log("event",client);
     props.handleClientPost(client);
+    // Move to equalities page
+
+    // wait for response from server / db before doing this next bit
+    window.location = "/equality"
   }
 
     return(
