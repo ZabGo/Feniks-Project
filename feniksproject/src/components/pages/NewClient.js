@@ -5,12 +5,12 @@ const NewClient =(props)=>{
     event.preventDefault();
 
     // Turn address and projects into array
-    const address = [
-      event.target.address1.value,
-      event.target.address2.value,
-      event.target.address3.value,
-      event.target.address4.value
-    ];
+    const address = {
+      "address1": event.target.address1.value,
+      "address2": event.target.address2.value,
+      "address3": event.target.address3.value,
+      "address4": event.target.address4.value
+    };
 
     const projects = {
       "active50":event.target.project1.checked,
