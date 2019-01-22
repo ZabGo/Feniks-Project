@@ -11,11 +11,9 @@ class NewClientContainer extends Component{
   }
 
   handleClientPost(client){
-    console.log("client", client);
+    console.log("clientInClientContainer", client);
     const request = new Request();
-    request.post('', client)
-  //   .then(() => {
-  // window.location = "/clients"})
+    request.post('https://qe957tlq68.execute-api.eu-west-2.amazonaws.com/production/clients/', client)
 }
 
 
