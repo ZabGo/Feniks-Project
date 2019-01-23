@@ -4,7 +4,7 @@ const NewClient = (props)=>{
   function handleSubmit(event){
     event.preventDefault();
 
-    console.log("props", props);
+    console.log("props in NewClient", props);
 
     // Turn address and projects into array
     const address = {
@@ -45,7 +45,7 @@ const NewClient = (props)=>{
     console.log("event",client);
     props.handleClientPost(client);
 
-    console.log("handle", props.handleClientPost(client))
+    // console.log("handle", props.handleClientPost(client))
     // Move to equalities page
 
     // wait for response from server / db before doing this next bit

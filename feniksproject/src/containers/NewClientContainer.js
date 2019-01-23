@@ -16,7 +16,7 @@ class NewClientContainer extends Component{
     // xavier account:
     // request.post('https://qe957tlq68.execute-api.eu-west-2.amazonaws.com/production/clients/', client)
     // graham account:
-    request.post('https://wmh3woyhoe.execute-api.eu-west-2.amazonaws.com/prodTest/clients/', client)
+    request.post('https://71vtl1r2jd.execute-api.eu-west-2.amazonaws.com/prodTest/clients/', client)
 }
 
 

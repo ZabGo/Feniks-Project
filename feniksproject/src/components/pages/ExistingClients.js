@@ -1,10 +1,28 @@
-import React,{Fragment} from 'react';
+import React,{Fragment, Component} from 'react';
 import {Link} from 'react-router-dom';
+import Request from '../../helper/Request.js'
 
 import ClientList from '../bits/ClientList.js';
 
-const ExistingClients=()=>(
-  <Fragment>
+
+class ExistingClients extends Component{
+
+constructor(props){
+  super(props);
+  this.state = {clients: []}
+}
+
+componentDidMount(){
+  let request = new Request();
+  request.get('https://71vtl1r2jd.execute-api.eu-west-2.amazonaws.com/prodTest/clients/').then((data) => {
+    console.log('get request for all existing clients', data);
+    this.setState({clients: data});
+    console.log('State is:',this.state);
+  });
+}
+
+  render(){
+  return (<Fragment>
     <div className="content-block">
       <div className="row">
         <h4>Existing Clients</h4>
@@ -58,6 +76,7 @@ const ExistingClients=()=>(
       <div className="col-sm-3">
         <div className="column-head">Unassigned Clients</div>
         <div className="column-body">
+
           <ClientList name="Shorty Flan"/>
           <ClientList name="Crunchy Michaels"/>
           <ClientList name="Terry Grapes"/>
@@ -67,5 +86,7 @@ const ExistingClients=()=>(
       </div>
     </div>
   </Fragment>
-)
+
+  )};
+}
 export default ExistingClients;
