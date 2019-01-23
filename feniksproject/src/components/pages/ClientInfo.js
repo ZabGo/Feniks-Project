@@ -3,8 +3,6 @@ import {Link} from 'react-router-dom';
 
 const ClientInfo= (props) => {
 
-console.log("props in ClientInfo", props);
-
   return (
   <Fragment>
     <div className="content-block">

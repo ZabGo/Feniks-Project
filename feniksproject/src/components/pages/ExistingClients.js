@@ -1,6 +1,7 @@
 import React,{Fragment, Component} from 'react';
 import {Link} from 'react-router-dom';
 import Request from '../../helper/Request.js'
+import {url} from '../../helper/AwsRoute.js';
 
 import ClientList from '../bits/ClientList.js';
 
@@ -14,20 +15,10 @@ constructor(props){
 
 componentDidMount(){
   let request = new Request();
-  request.get('https://71vtl1r2jd.execute-api.eu-west-2.amazonaws.com/prodTest/clients/').then((data) => {
-    console.log('get request for all existing clients', data);
+  request.get(`${url}`).then((data) => {
     this.setState({clients: data});
-    console.log('State is:',this.state);
   });
 }
-
-// const clients = props.clients.map( (client) => {
-//   return (
-
-//
-//   );
-// })
-
 
   render(){
   return (<Fragment>
