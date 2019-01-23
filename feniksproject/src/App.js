@@ -6,6 +6,7 @@ import NewClient from './components/pages/NewClient.js';
 import ExistingClients from './components/pages/ExistingClients.js';
 
 import NewClientContainer from './containers/NewClientContainer'
+import DetailedClientContainer from './containers/DetailedClientContainer'
 import ClientAssessment from './components/pages/ClientAssessment.js'
 import ClientInfo from './components/pages/ClientInfo.js'
 import EditClient from './components/pages/EditClient.js'
@@ -44,7 +45,10 @@ class App extends Component {
             <Route path="/newclient" component={NewClientContainer} />
             <Route path="/clients" component={ExistingClients} />
             <Route path="/assess" component={ClientAssessment} />
-            <Route path="/details" component={ClientInfo} />
+            <Route path="/details/:id" render = {(props) => {
+              const id = props.match.params.id;
+              return <DetailedClientContainer id = {id}/>
+            }}/>
             <Route path="/edit" component={EditClient} />
             <Route path="/equality" component={Equalities} />
           </div>

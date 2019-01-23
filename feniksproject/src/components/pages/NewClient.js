@@ -1,16 +1,18 @@
 import React,{Component,Fragment,Link} from 'react';
 
-const NewClient =(props)=>{
+const NewClient = (props)=>{
   function handleSubmit(event){
     event.preventDefault();
 
+    console.log("props in NewClient", props);
+
     // Turn address and projects into array
-    const address = [
-      event.target.address1.value,
-      event.target.address2.value,
-      event.target.address3.value,
-      event.target.address4.value
-    ];
+    const address = {
+      "address1": event.target.address1.value,
+      "address2": event.target.address2.value,
+      "address3": event.target.address3.value,
+      "address4": event.target.address4.value
+    };
 
     const projects = {
       "active50":event.target.project1.checked,
@@ -42,19 +44,25 @@ const NewClient =(props)=>{
     }
     console.log("event",client);
     props.handleClientPost(client);
+
+    // console.log("handle", props.handleClientPost(client))
     // Move to equalities page
 
     // wait for response from server / db before doing this next bit
-    window.location = "/equality"
+    // window.location = "/equality"
   }
 
     return(
       <Fragment>
         <form onSubmit={handleSubmit}>
           <div className="content-block">
+            <div className="col-sm-4">
+              <h4>Registration Form</h4>
+              </div>
             <div className="row">
               <h4>Personal Information</h4>
             </div>
+
 
             <div className="form-group row">
               <label htmlFor="title" className="col-sm-2 col-form-label">Title</label>

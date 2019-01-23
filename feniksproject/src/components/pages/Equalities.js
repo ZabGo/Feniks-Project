@@ -25,6 +25,9 @@ const Equalities =(props)=> {
     return (
       <Fragment>
         <form onSubmit={handleSubmit}>
+          <div className="col-sm-4">
+            <h4>Equalities Form</h4>
+          </div>
           <div className="content-block">
             <div className="row">
               <h4>Basic Information</h4>

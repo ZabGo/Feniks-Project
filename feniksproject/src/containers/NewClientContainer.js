@@ -11,11 +11,12 @@ class NewClientContainer extends Component{
   }
 
   handleClientPost(client){
-    console.log("client", client);
+    console.log("clientInClientContainer", client);
     const request = new Request();
-    request.post('https://k3eperdz4f.execute-api.eu-west-2.amazonaws.com/Production/clients', client)
-  //   .then(() => {
-  // window.location = "/clients"})
+    // xavier account:
+    // request.post('https://qe957tlq68.execute-api.eu-west-2.amazonaws.com/production/clients/', client)
+    // graham account:
+    request.post('https://71vtl1r2jd.execute-api.eu-west-2.amazonaws.com/prodTest/clients/', client).then(() => window.location = "/equality")
 }
 
 
