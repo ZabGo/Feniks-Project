@@ -56,9 +56,13 @@ const NewClient = (props)=>{
       <Fragment>
         <form onSubmit={handleSubmit}>
           <div className="content-block">
+            <div className="col-sm-4">
+              <h4>Registration Form</h4>
+              </div>
             <div className="row">
               <h4>Personal Information</h4>
             </div>
+
 
             <div className="form-group row">
               <label htmlFor="title" className="col-sm-2 col-form-label">Title</label>
