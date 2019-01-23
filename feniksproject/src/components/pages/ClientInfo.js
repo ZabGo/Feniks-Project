@@ -26,10 +26,15 @@ console.log("props in ClientInfo", props);
       </div>
       <div className="row">
         <div className="col-sm-12">
-        <p> NAME </p>
-        <p> {props.client.forename} </p>
-        <p> {props.client.surname} </p>
-          Client ID | Title | Name | Date of Birth | GP | Address | Phone | email | employment status | voicemail | from Feniks? | Mailing list
+        <p> Title: {props.client.title} </p>
+        <p> Forename: {props.client.forename} </p>
+        <p> Surname: {props.client.surname} </p>
+        <p> Date of Birth: {props.client.dob} </p>
+        <p> Email: {props.client.email} </p>
+        <p> Phone number: {props.client.phone} </p>
+        <p> Address: {props.client.address.address1}  {props.client.address.address2}, {props.client.address.address3}, {props.client.address.address4} </p>
+        <p> Employment: {props.client.employment} </p>
+
         </div>
       </div>
     </div>
