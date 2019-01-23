@@ -21,6 +21,13 @@ componentDidMount(){
   });
 }
 
+// const clients = props.clients.map( (client) => {
+//   return (
+//
+//   );
+// })
+
+
   render(){
   return (<Fragment>
     <div className="content-block">
@@ -77,11 +84,14 @@ componentDidMount(){
         <div className="column-head">Unassigned Clients</div>
         <div className="column-body">
 
-          <ClientList name="Shorty Flan"/>
-          <ClientList name="Crunchy Michaels"/>
-          <ClientList name="Terry Grapes"/>
-          <ClientList name="Pimco Melon"/>
-          <ClientList name="The Arnold"/>
+          {
+            this.state.clients.map((client) =>{
+              return (<ClientList name={client.forename} />);
+            })
+          }
+
+
+
         </div>
       </div>
     </div>
