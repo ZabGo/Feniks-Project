@@ -74,10 +74,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 Before deploying anything to the S3 bucket you need to the AWS Command Line Interface (AWS CLI). 
 In order to do so, you will need to configure AWS CLI: 
 `aws configure . 
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE . 
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY . 
-Default region name [None]: us-west-2 . 
-Default output format [None]: json` . 
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE <br>
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY <br> 
+Default region name [None]: us-west-2 <br>
+Default output format [None]: json` <br>
 
 ### Step 1 
 Build the app for production by entering the command `npm run build`
