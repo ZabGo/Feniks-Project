@@ -75,7 +75,7 @@ Build the app for production by entering the command `npm run build`
 ### Step 2
 Deploy the build folder to your S3 bucket by entering the following command: `npm run deploy`<br>
 
-You can change the bucket name in the file package.jason: `aws s3 sync build/ s3://name_of_the_bucket`
+You can change the bucket name in the file package.json: `aws s3 sync build/ s3://name_of_the_bucket`
 
 
 
