@@ -70,10 +70,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ## Deploying app to AWS S3
 
 ### Step 1 
-Build the app for production by enter the command `npm run build`
+Build the app for production by entering the command `npm run build`
 
 ### Step 2
-Deploy the build folder to your S3 bucket by enter the following command: `npm run deploy`<br>
+Deploy the build folder to your S3 bucket by entering the following command: `npm run deploy`<br>
 
 You can change the bucket name in the file package.jason: `aws s3 sync build/ s3://name_of_the_bucket`
 
