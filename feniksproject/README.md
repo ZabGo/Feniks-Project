@@ -67,12 +67,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-### Deploying app to AWS S3
+## Deploying app to AWS S3
 
-## Step 1 
+### Step 1 
 Build the app for production by enter the command `npm run build`
 
-## Step 2
+### Step 2
 Deploy the build folder to your S3 bucket by enter the following command: `npm run deploy`<br>
 
 You can change the bucket name in the file package.jason: `aws s3 sync build/ s3://name_of_the_bucket`
