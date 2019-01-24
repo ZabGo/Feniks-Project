@@ -11,6 +11,7 @@ console.log('Projects: ',props.client.projects);
 
   for (var key in props.client.projects) {
     var value = props.client.projects[key];
+    console.log(key);
     if (value == true){
       projects = projects + key + " | ";
     }
