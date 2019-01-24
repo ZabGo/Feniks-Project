@@ -49,14 +49,70 @@ const ClientAssessment=(props)=>{
 
         <div className="content-block">
           <div className="row">
+            <h4>Schedule</h4>
+          </div>
+          <div className="form-group row">
+            <div className="col-sm-12">
+              <label>When is the client able to attend sessions? They are usually held at the same time, either weekly or fortnightly.</label>
+            </div>
+            <div className="col-sm-12">
+              <table>
+                <tr>
+                  <th></th>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                </tr>
+                <tr>
+                  <td>Morning</td>
+                  <td><input type="text" id="monday-morning" name="monday-morning" className="form-control"/></td>
+                  <td><input type="text" id="tuesday-morning" name="tuesday-morning" className="form-control"/></td>
+                  <td><input type="text" id="wednesday-morning" name="wednesday-morning" className="form-control"/></td>
+                  <td><input type="text" id="thursday-morning" name="thursday-morning" className="form-control"/></td>
+                  <td><input type="text" id="friday-morning" name="friday-morning" className="form-control"/></td>
+                  <td><input type="text" id="saturday-morning" name="saturday-morning" className="form-control"/></td>
+                </tr>
+                <tr>
+                  <td>Afternoon</td>
+                  <td><input type="text" id="monday-afternoon" name="monday-afternoon" className="form-control"/></td>
+                  <td><input type="text" id="tuesday-afternoon" name="tuesday-afternoon" className="form-control"/></td>
+                  <td><input type="text" id="wednesday-afternoon" name="wednesday-afternoon" className="form-control"/></td>
+                  <td><input type="text" id="thursday-afternoon" name="thursday-afternoon" className="form-control"/></td>
+                  <td><input type="text" id="friday-afternoon" name="friday-afternoon" className="form-control"/></td>
+                  <td><input type="text" id="saturday-afternoon" name="saturday-afternoon" className="form-control"/></td>
+                </tr>
+                <tr>
+                  <td>Evening</td>
+                  <td><input type="text" id="monday-evening" name="monday-evening" className="form-control"/></td>
+                  <td><input type="text" id="tuesday-evening" name="tuesday-evening" className="form-control"/></td>
+                  <td><input type="text" id="wednesday-evening" name="wednesday-evening" className="form-control"/></td>
+                  <td><input type="text" id="thursday-evening" name="thursday-evening" className="form-control"/></td>
+                  <td><input type="text" id="friday-evening" name="friday-evening" className="form-control"/></td>
+                  <td><input type="text" id="saturday-evening" name="saturday-evening" className="form-control"/></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div className="content-block">
+          <div className="row">
             <h4>Sessions</h4>
           </div>
-          <div className="row">
-            <ul>
-              <li>Schedule</li>
-              <li>Seen by practitioner</li>
-              <li>Session type</li>
-            </ul>
+          <div className="form-group row">
+            <label htmlFor="practitioner" className="col-sm-2 col-form-label">Seen by Practitioner</label>
+            <div className="col-sm-9">
+              <input type="text" id="practitioner" name="practitioner" className="form-control"  placeholder="Seen by Practitioner" />
+            </div>
+          </div>
+          <div className="form-group row">
+            <label htmlFor="sessiontype" className="col-sm-2 col-form-label">Session Type</label>
+            <div className="col-sm-9">
+              <input type="text" id="sessiontype" name="sessiontype" className="form-control"  placeholder="Session Type" />
+            </div>
           </div>
         </div>
 
@@ -64,18 +120,95 @@ const ClientAssessment=(props)=>{
           <div className="row">
             <h4>Client Information</h4>
           </div>
-          <div className="row">
-            <ul>
-              <li>Any Significant health problems or disabilities</li>
-              <li>Current relevant medication (What medication, dose if known, why they were prescribed and when)</li>
-              <li>Alcohol / Recreational drugs - past/present</li>
-              <li>Has the client ever physically harmed themselves in any way</li>
-              <li>Has the client ever considered taking their own life</li>
-              <li>Does the client have suicidal thoughts as of now</li>
-              <li>Has the client had therapy / counselling in the past</li>
-              <li>Is the client receiving any other form of therapy / seeing any other healthcare professional at present</li>
-              <li>Social situation (occupation, potential financial and social issues, living arrangements, family and friends, environmental issues, emotional support, etc)</li>
-            </ul>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="health-text" className="col-sm-12 col-form-label">Any Significant health problems or disabilities</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="health-text" name="health-text" className="form-control" rows="7" />
+              </div>
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="medication-text" className="col-sm-12 col-form-label">Current relevant medication (What medication, dose if known, why they were prescribed and when)</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="medication-text" name="medication-text" className="form-control" rows="7" />
+              </div>
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="alcoholdrugs-text" className="col-sm-12 col-form-label">Alcohol / Recreational drugs - past/present</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="alcoholdrugs-text" name="alcoholdrugs-text" className="form-control" rows="7" />
+              </div>
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="selfharm-text" className="col-sm-12 col-form-label">Has the client ever physically harmed themselves in any way</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="selfharm-text" name="selfharm-text" className="form-control" rows="7" />
+              </div>
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="suicidecons-text" className="col-sm-12 col-form-label">Has the client ever considered taking their own life</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="suicidecons-text" name="suicidecons-text" className="form-control" rows="7" />
+              </div>
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="suicidethoughts-text" className="col-sm-12 col-form-label">Does the client have suicidal thoughts as of now</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="suicidethoughts-text" name="suicidethoughts-text" className="form-control" rows="7" />
+              </div>
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="therapy-text" className="col-sm-12 col-form-label">Has the client had therapy / counselling in the past</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="therapy-text" name="therapy-text" className="form-control" rows="7" />
+              </div>
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="othertherapy-text" className="col-sm-12 col-form-label">Is the client receiving any other form of therapy / seeing any other healthcare professional at present</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="othertherapy-text" name="othertherapy-text" className="form-control" rows="7" />
+              </div>
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="social-text" className="col-sm-12 col-form-label">Social situation (occupation, potential financial and social issues, living arrangements, family and friends, environmental issues, emotional support, etc)</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="social-text" name="social-text" className="form-control" rows="7" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -180,11 +313,22 @@ const ClientAssessment=(props)=>{
             <input type="checkbox" id="" name="" className="form-check-input"/>
             <label className="form-check-label" htmlFor="">Other</label>
           </div>
-          <div className="row">
-            <ul>
-              <li>Main current issue</li>
-              <li>What would the client like from therapy / counselling</li>
-            </ul>
+
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="currentissue" className="col-sm-2 col-form-label">Main Current Issue</label>
+              <div className="col-sm-9">
+                <input type="text" id="currentissue" name="currentissue" className="form-control"  placeholder="Main Current Issue" />
+              </div>
+            </div>
+            <div className="row">
+              <label htmlFor="counsellinggoal-text" className="col-sm-12 col-form-label">What would the client like from therapy / counselling</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="counsellinggoal-text" name="counsellinggoal-text" className="form-control" rows="7" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -192,14 +336,59 @@ const ClientAssessment=(props)=>{
           <div className="row">
             <h4>Information for Allocation</h4>
           </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="thoughts-text" className="col-sm-12 col-form-label">Assessment therapists / counsellors thoughts and feelings during and after session</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="thoughts-text" name="thoughts-text" className="form-control" rows="7" />
+              </div>
+            </div>
+            <div className="row">
+              <label htmlFor="appropriate-text" className="col-sm-12 col-form-label">Appropriate for therapy / counselling?</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="appropriate-text" name="appropriate-text" className="form-control" rows="7" />
+              </div>
+            </div>
+            <div className="row">
+              <label htmlFor="type-text" className="col-sm-12 col-form-label">Type of therapist / counsellor required?</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="type-text" name="type-text" className="form-control" rows="7" />
+              </div>
+            </div>
+            <div className="row">
+              <label htmlFor="referrals-text" className="col-sm-12 col-form-label">Referrals to other projects suggested</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="referrals-text" name="referrals-text" className="form-control" rows="7" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="content-block">
           <div className="row">
-            <ul>
-              <li>Assessment therapists / counsellors thoughts and feelings during and after session</li>
-              <li>appropriate for therapy / counselling</li>
-              <li>thype of therapist / counsellor required</li>
-              <li>Referrals to other projects suggested</li>
-              <li>Notes</li>
-            </ul>
+            <h4>Notes</h4>
+          </div>
+          <div className="form-group">
+            <div className="row">
+              <label htmlFor="thoughts-text" className="col-sm-12 col-form-label">All Notes</label>
+            </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <textarea id="thoughts-text" name="thoughts-text" className="form-control" rows="14" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="content-block">
+          <div className="form-group">
+            <input type="submit" className="btn btn-lg btn-block btn-success" value="Save"/>
           </div>
         </div>
       </form>
