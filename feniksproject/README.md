@@ -73,13 +73,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 build the app for production by enter the command `npm run build`
 
 ## Step 2
-Deploy the build folder to your S3 bucket by enter the following command: `npm run deploy`
+Deploy the build folder to your S3 bucket by enter the following command: `npm run deploy`<br>
 
+You can change the bucket name in the file packacge.jason: `aws s3 sync build/ s3://name_of_the_bucket`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
 
