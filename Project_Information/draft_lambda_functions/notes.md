@@ -1,3 +1,6 @@
+This folder contains examples of Lambda functions that can be used with a local instance of dynamoDB, or as the basis for adding the missing Lambda functions to the project.
+
+
 AWS dynamoDB CLI commands:
 
 https://docs.aws.amazon.com/cli/latest/reference/dynamodb/
