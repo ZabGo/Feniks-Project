@@ -3,15 +3,10 @@ import {Link} from 'react-router-dom';
 
 const ClientInfo= (props) => {
 
-
-console.log("props in ClientInfo", props);
-console.log('Projects: ',props.client.projects);
-
   var projects = "";
 
   for (var key in props.client.projects) {
     var value = props.client.projects[key];
-    console.log(key);
     if (value == true){
       projects = projects + key + " | ";
     }

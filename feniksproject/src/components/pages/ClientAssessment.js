@@ -9,7 +9,7 @@ const ClientAssessment=(props)=>{
       "thing":event.target.thing.value,
       "thing2":event.target.thing2.value
     }
-
+// Assessment form post functionality still missing: handleAssessmentPost not written.
     props.handleAssessmentPost(assessment);
   }
 
