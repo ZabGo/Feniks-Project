@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts (See below for deploying app to AWS S3)
 
 In the project directory, you can run:
 
@@ -66,3 +66,26 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Deploying app to AWS S3
+
+## Step 0
+
+Before deploying anything to the S3 bucket you need to the AWS Command Line Interface (AWS CLI). 
+In order to do so, you will need to configure AWS CLI: <br>
+`aws configure` <br>
+`AWS Access Key ID [None]: your AWS Access Key` <br>
+`AWS Secret Access Key [None]: your AWS Secret Access Key` <br>
+`Default region name [None]: your region name` <br>
+`Default output format [None]: json` <br>
+
+### Step 1 
+Build the app for production by entering the command `npm run build`
+
+### Step 2
+Deploy the build folder to your S3 bucket by entering the following command: `npm run deploy`<br>
+
+You can change the bucket name in the file package.json: `aws s3 sync build/ s3://name_of_the_bucket`
+
+
+
