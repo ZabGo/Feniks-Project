@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
+import 'bootstrap';
+import 'popper.js/dist/popper.js';
 
 import Home from './components/pages/Home.js';
 import NewClient from './components/pages/NewClient.js';
